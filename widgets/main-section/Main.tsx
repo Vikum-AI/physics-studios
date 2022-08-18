@@ -6,8 +6,8 @@ import DoodleOne from "../../Assets/doodles/1.png";
 
 export default function Main() {
   return (
-    <div className="h-[70vh] flex items-center justify-around bg-gradient-to-r rounded-b-[10rem]">
-      <div className="flex justify-center items-center w-[40%] h-[40%] bg-cyan-50">
+    <div className="h-[70vh] flex items-center justify-around bg-gradient-to-r rounded-b-[4rem] bg-[#edf0f7]">
+      <div className="flex justify-center items-center w-[40%] h-[40%]">
         <MainInfo />
       </div>
       <div>
@@ -22,11 +22,11 @@ export default function Main() {
         </Player>
       </div>
 
-      <Image
+      {/* <Image
         src={DoodleOne}
         alt="doodle"
         className="absolute bottom-0 right-10"
-      />
+      /> */}
     </div>
   );
 }
