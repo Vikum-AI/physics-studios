@@ -27,10 +27,17 @@ export default function Main() {
         <MainInfo />
       </div>
       <div>
-        <Player
+        {/* <Player
           autoplay
           loop
           src="https://assets6.lottiefiles.com/packages/lf20_hh8crugh.json"
+          style={{ height: "450px", width: "450px" }}
+          className="main-player"
+        > */}
+        <Player
+          autoplay
+          loop
+          src="https://assets2.lottiefiles.com/packages/lf20_ikvz7qhc.json"
           style={{ height: "450px", width: "450px" }}
           className="main-player"
         >

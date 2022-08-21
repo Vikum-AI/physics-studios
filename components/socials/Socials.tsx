@@ -6,7 +6,7 @@ export default function Socials() {
   return (
     <div>
       <ul className="flex">
-        <li className="m-4 cursor-pointer">
+        <li className="m-4 ml-0 cursor-pointer">
           <BsFacebook
             className="hover:text-[#4267B2] transition duration-500"
             size={25}

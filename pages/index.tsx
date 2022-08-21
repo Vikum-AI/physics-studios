@@ -1,10 +1,8 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
+import AffixComp from "../components/affix/Affix";
 import Divider from "../components/divider/Divider";
-import styles from "../styles/Home.module.css";
 import EnrollContact from "../widgets/enroll-contact/EnrollContact";
-import Entroll from "../widgets/enroll-section/Enroll";
+import Enroll from "../widgets/enroll-section/Enroll";
 import Explain from "../widgets/explain-section/Explain";
 import Footer from "../widgets/footer/Footer";
 import Main from "../widgets/main-section/Main";
@@ -23,9 +21,10 @@ const Home: NextPage = () => {
       <Divider />
       <Main />
       <Explain />
-      <Entroll />
+      <Enroll />
       <EnrollContact />
       <Footer />
+      {/* <AffixComp /> */}
     </div>
   );
 };
