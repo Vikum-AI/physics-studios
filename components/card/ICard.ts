@@ -5,6 +5,7 @@ interface ICard {
   image?: JSX.Element;
   extras?: string;
   button?: string;
+  tertiary?: string;
 }
 
 export default ICard;

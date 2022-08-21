@@ -18,8 +18,8 @@ const NavListData: Array<INavListData> = [
   },
   {
     id: 1,
-    label: "Login",
-    path: "/login",
+    label: "Testamonials",
+    path: "/testamonials",
   },
 ];
 

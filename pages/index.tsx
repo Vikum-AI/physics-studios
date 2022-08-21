@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css";
 import EnrollContact from "../widgets/enroll-contact/EnrollContact";
 import Entroll from "../widgets/enroll-section/Enroll";
 import Explain from "../widgets/explain-section/Explain";
+import Footer from "../widgets/footer/Footer";
 import Main from "../widgets/main-section/Main";
 import NavbarMobile from "../widgets/navbar-mobile/NavbarMobile";
 import NavBar from "../widgets/navbar/NavBar";
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
       <Explain />
       <Entroll />
       <EnrollContact />
+      <Footer />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 interface INavList {
-  data: JSX.Element;
+  extras?: string;
 }
 
 export default INavList;

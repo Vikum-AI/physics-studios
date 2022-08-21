@@ -5,7 +5,7 @@ import Card from "../../components/card/Card";
 
 function Enroll() {
   return (
-    <div className="mt-[5rem]">
+    <div className="mb-[10rem]">
       <div>
         <h1 className="text-3xl font-bold text-start m-8  ml-12">
           Enroll in a class
@@ -16,7 +16,8 @@ function Enroll() {
         <Card
           title="Cambridge Practicals"
           description="Mondays"
-          secondary="4:00pm - 6:30pm"
+          secondary="4:00pm - 6:30pm (IST)"
+          tertiary="10:30am - 01:00pm (GMT)"
           button="Enroll Now"
           image={<MdOutlineScience size={50} color="" />}
           extras="mx-20"
@@ -25,6 +26,7 @@ function Enroll() {
           title="Cambridge ALs 2023"
           description="Wednesday"
           secondary="4:00pm - 6:30pm"
+          tertiary="10:30am - 01:00pm (GMT)"
           button="Enroll Now"
           image={<BsJournalBookmarkFill size={50} />}
           extras="mx-20"
@@ -32,7 +34,8 @@ function Enroll() {
         <Card
           title="Cambridge ALs 2024"
           description="Thursday"
-          secondary="4:00pm - 6:30pm"
+          secondary="4:00pm - 6:30pm (IST)"
+          tertiary="10:30am - 01:00pm (GMT)"
           button="Enroll Now"
           image={<BsJournalBookmarkFill size={50} />}
           extras="mx-20"
@@ -40,7 +43,8 @@ function Enroll() {
         <Card
           title="Edexcel ALs 2024"
           description="Saturday"
-          secondary="10:30am - 1:00pm"
+          secondary="10:30am - 1:00pm (IST)"
+          tertiary="05:00am - 07:30pm (GMT)"
           button="Enroll Now"
           image={<BsJournalBookmarkFill size={50} />}
           extras="mx-20"
@@ -48,15 +52,17 @@ function Enroll() {
         <Card
           title="Edexcel ALs 2023"
           description="Sunday"
-          secondary="10:30am - 1:00pm"
+          secondary="10:30am - 1:00pm (IST)"
+          tertiary="05:00am - 07:30pm (GMT)"
           button="Enroll Now"
           image={<BsJournalBookmarkFill size={50} />}
           extras="mx-20"
         />
         <Card
-          title="Edexcel OLs 2024"
+          title="Edexcel IGCSEs 2024"
           description="Saturday"
-          secondary="3:30pm - 5:30pm"
+          secondary="3:30pm - 5:30pm (IST)"
+          tertiary="10:00am - 12:00pm (GMT)"
           button="Enroll Now"
           image={<BsJournalBookmarkFill size={50} />}
           extras="mx-20"
