@@ -21,19 +21,19 @@ export default function Explain() {
 
       <div className="flex justify-around my-10">
         <Card
-          title="Enroll in a class"
-          image={<FaChalkboardTeacher color="#1fc5aa" size={60} />}
-          description="We bring empowerment to tutoring services by providing both online and physical lessons"
+          title="Enrol in a class"
+          image={<FaChalkboardTeacher color="#a81505" size={60} />}
+          description="Join a trial class for free by using the portals below."
         />
         <Card
           title="Join Online or Physical"
           image={<BsCameraVideo color="#4991ff" size={60} />}
-          description="We bring empowerment to tutoring services by providing both online and physical lessons"
+          description="Join the classes from anywhere. Join the live streaming classes via Zoom or visit us at the Institute."
         />
         <Card
           title="Get great results"
           image={<BiBookReader color="#54c369" size={60} />}
-          description="We bring empowerment to tutoring services by providing both online and physical lessons"
+          description="Take the unit tests and boost your confidence. Mock tests are available in both online and on-site."
         />
       </div>
       <div className="relative w-[8%] left-[40%] -top-2 -z-30 m-0">

@@ -10,7 +10,7 @@ export default function MainInfo() {
       </div>
       <div className="flex flex-col justify-center">
         <h1 className="text-4xl font-bold m-4">
-          A Simple Platform for All your Physics Learning Needs.
+          A Simple Platform for All Your Physics Learning Needs.
         </h1>
         <div className="bg-gradient-to-r from-[#40E0D0] via-[#FF8C00] to-[#FF0080] h-2 w-[48%] relative left-4 -top-3 rounded-md"></div>
         <div className="bg-gradient-to-r from-[#40E0D0] via-[#FF8C00] to-[#FF0080] h-2 w-[48%] relative left-4 -top-4 -rotate-[1deg] rounded-md"></div>

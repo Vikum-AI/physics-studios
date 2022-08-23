@@ -20,7 +20,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="w-[80%] ml-4">
-          <p> 767 5th Ave, New York, NY 10153, United States</p>
+          <p>
+            {" "}
+            34, Walauwatte Road <br /> Nugegoda <br /> Colombo <br /> Sri Lanka
+          </p>
         </div>
       </div>
       <div>

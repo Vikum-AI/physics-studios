@@ -3,12 +3,13 @@ import { MdOutlineScience } from "react-icons/md";
 import { BsJournalBookmarkFill } from "react-icons/bs";
 import Card from "../../components/card/Card";
 
-function Enroll() {
+// change the icons to the ones sent in telegram.
+function Enrol() {
   return (
     <div className="mb-[10rem]">
       <div>
         <h1 className="text-3xl font-bold text-start m-8  ml-12">
-          Enroll in a class
+          Enrol in a class
         </h1>
         <div className="w-[15rem] h-4 bg-red-200 relative -top-11 left-10 opacity-50 -z-10"></div>
       </div>
@@ -18,7 +19,7 @@ function Enroll() {
           description="Mondays"
           secondary="4:00pm - 6:30pm (IST)"
           tertiary="10:30am - 01:00pm (GMT)"
-          button="Enroll Now"
+          button="Enrol Now"
           image={<MdOutlineScience size={50} color="" />}
           extras="mx-20"
         />
@@ -27,7 +28,7 @@ function Enroll() {
           description="Wednesday"
           secondary="4:00pm - 6:30pm"
           tertiary="10:30am - 01:00pm (GMT)"
-          button="Enroll Now"
+          button="Enrol Now"
           image={<BsJournalBookmarkFill size={50} />}
           extras="mx-20"
         />
@@ -36,7 +37,7 @@ function Enroll() {
           description="Thursday"
           secondary="4:00pm - 6:30pm (IST)"
           tertiary="10:30am - 01:00pm (GMT)"
-          button="Enroll Now"
+          button="Enrol Now"
           image={<BsJournalBookmarkFill size={50} />}
           extras="mx-20"
         />
@@ -45,7 +46,7 @@ function Enroll() {
           description="Saturday"
           secondary="10:30am - 1:00pm (IST)"
           tertiary="05:00am - 07:30pm (GMT)"
-          button="Enroll Now"
+          button="Enrol Now"
           image={<BsJournalBookmarkFill size={50} />}
           extras="mx-20"
         />
@@ -54,7 +55,7 @@ function Enroll() {
           description="Sunday"
           secondary="10:30am - 1:00pm (IST)"
           tertiary="05:00am - 07:30pm (GMT)"
-          button="Enroll Now"
+          button="Enrol Now"
           image={<BsJournalBookmarkFill size={50} />}
           extras="mx-20"
         />
@@ -63,7 +64,7 @@ function Enroll() {
           description="Saturday"
           secondary="3:30pm - 5:30pm (IST)"
           tertiary="10:00am - 12:00pm (GMT)"
-          button="Enroll Now"
+          button="Enrol Now"
           image={<BsJournalBookmarkFill size={50} />}
           extras="mx-20"
         />
@@ -72,4 +73,4 @@ function Enroll() {
   );
 }
 
-export default Enroll;
+export default Enrol;
