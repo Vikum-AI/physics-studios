@@ -1,4 +1,6 @@
 interface IHeader {
-    label: string;
-    extras?: string;
+  label: string;
+  extras?: string;
 }
+
+export default IHeader;

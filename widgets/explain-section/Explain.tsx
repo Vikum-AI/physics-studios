@@ -3,8 +3,9 @@ import Card from "../../components/card/Card";
 import { BsCameraVideo } from "react-icons/bs";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { BiBookReader } from "react-icons/bi";
-import Image from "next/image";
+
 import SquigglyArrowOne from "../../Assets/doodles/squiggly-arrow-1.png";
+import Image from "next/image";
 
 export default function Explain() {
   return (
@@ -22,17 +23,23 @@ export default function Explain() {
       <div className="flex justify-around my-10">
         <Card
           title="Enrol in a class"
-          image={<FaChalkboardTeacher color="#a81505" size={60} />}
+          Icon={FaChalkboardTeacher}
+          iconColor="#1fc5aa"
+          iconSize={60}
           description="Join a trial class for free by using the portals below."
         />
         <Card
           title="Join Online or Physical"
-          image={<BsCameraVideo color="#4991ff" size={60} />}
+          Icon={BsCameraVideo}
+          iconColor="#4991ff"
+          iconSize={60}
           description="Join the classes from anywhere. Join the live streaming classes via Zoom or visit us at the Institute."
         />
         <Card
           title="Get great results"
-          image={<BiBookReader color="#54c369" size={60} />}
+          Icon={BiBookReader}
+          iconColor="#54c369"
+          iconSize={60}
           description="Take the unit tests and boost your confidence. Mock tests are available in both online and on-site."
         />
       </div>

@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
-import AffixComp from "../components/affix/Affix";
+import { useState } from "react";
 import Divider from "../components/divider/Divider";
+import ModalComponent from "../components/modal/Modal";
 import EnrollContact from "../widgets/enroll-contact/EnrollContact";
 import Enroll from "../widgets/enroll-section/Enroll";
 import Explain from "../widgets/explain-section/Explain";
@@ -10,8 +11,14 @@ import NavbarMobile from "../widgets/navbar-mobile/NavbarMobile";
 import NavBar from "../widgets/navbar/NavBar";
 
 const Home: NextPage = () => {
+  const [active, setActive] = useState(false);
+
+  const enrolFunc = () => {
+    setActive(!active);
+  };
+
   return (
-    <div>
+    <div className="w-[100vw]">
       <div className="hidden md:block shadow-sm">
         <NavBar />
       </div>
@@ -22,7 +29,7 @@ const Home: NextPage = () => {
       <Main />
       <Explain />
       <Enroll />
-      <EnrollContact />
+      {/* <EnrollContact /> */}
       <Footer />
       {/* <AffixComp /> */}
     </div>

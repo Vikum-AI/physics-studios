@@ -3,6 +3,7 @@ interface IButton {
   icon?: JSX.Element;
   extras?: string;
   varient?: string;
+  onClick?: (...params: any) => any;
 }
 
 export default IButton;

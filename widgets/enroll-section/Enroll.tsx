@@ -1,10 +1,22 @@
-import React from "react";
-import { MdOutlineScience } from "react-icons/md";
-import { BsJournalBookmarkFill } from "react-icons/bs";
+import { Input } from "@mantine/core";
+import React, { useState } from "react";
+import Button from "../../components/button/Button";
 import Card from "../../components/card/Card";
+import ModalComponent from "../../components/modal/Modal";
+import EnrolData from "../../const/EnrolData";
 
-// change the icons to the ones sent in telegram.
 function Enrol() {
+  const [active, setActive] = useState(false);
+  const [label, setLabel] = useState("");
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
+  const enrollFunc = (displayName: string) => {
+    setActive(!active);
+    return displayName;
+  };
+
   return (
     <div className="mb-[10rem]">
       <div>
@@ -13,62 +25,60 @@ function Enrol() {
         </h1>
         <div className="w-[15rem] h-4 bg-red-200 relative -top-11 left-10 opacity-50 -z-10"></div>
       </div>
-      <div className="flex justify-around break-all overflow-clip flex-wrap h-[100vh] items-baseline mt-10">
-        <Card
-          title="Cambridge Practicals"
-          description="Mondays"
-          secondary="4:00pm - 6:30pm (IST)"
-          tertiary="10:30am - 01:00pm (GMT)"
-          button="Enrol Now"
-          image={<MdOutlineScience size={50} color="" />}
-          extras="mx-20"
-        />
-        <Card
-          title="Cambridge ALs 2023"
-          description="Wednesday"
-          secondary="4:00pm - 6:30pm"
-          tertiary="10:30am - 01:00pm (GMT)"
-          button="Enrol Now"
-          image={<BsJournalBookmarkFill size={50} />}
-          extras="mx-20"
-        />
-        <Card
-          title="Cambridge ALs 2024"
-          description="Thursday"
-          secondary="4:00pm - 6:30pm (IST)"
-          tertiary="10:30am - 01:00pm (GMT)"
-          button="Enrol Now"
-          image={<BsJournalBookmarkFill size={50} />}
-          extras="mx-20"
-        />
-        <Card
-          title="Edexcel ALs 2024"
-          description="Saturday"
-          secondary="10:30am - 1:00pm (IST)"
-          tertiary="05:00am - 07:30pm (GMT)"
-          button="Enrol Now"
-          image={<BsJournalBookmarkFill size={50} />}
-          extras="mx-20"
-        />
-        <Card
-          title="Edexcel ALs 2023"
-          description="Sunday"
-          secondary="10:30am - 1:00pm (IST)"
-          tertiary="05:00am - 07:30pm (GMT)"
-          button="Enrol Now"
-          image={<BsJournalBookmarkFill size={50} />}
-          extras="mx-20"
-        />
-        <Card
-          title="Edexcel IGCSEs 2024"
-          description="Saturday"
-          secondary="3:30pm - 5:30pm (IST)"
-          tertiary="10:00am - 12:00pm (GMT)"
-          button="Enrol Now"
-          image={<BsJournalBookmarkFill size={50} />}
-          extras="mx-20"
-        />
+      <div className="flex justify-around items-baseline h-[110vh] mt-10 flex-wrap">
+        {EnrolData.map((item) => (
+          <Card
+            key={item.id}
+            title={item.title}
+            description={item.description}
+            secondary={item.secondary}
+            tertiary={item.tertiary}
+            image={item.image}
+            extras="mx-20"
+            button={item.button}
+            onClick={() => {
+              enrollFunc(item.title);
+              setLabel(item.title);
+            }}
+          />
+        ))}
       </div>
+      <ModalComponent
+        opened={active}
+        onClick={() => setActive(!active)}
+        enrolTitle={label}
+      >
+        <h1 className="mb-4 text-xl">Confirm Enrollment</h1>
+        <div className="flex items-center">
+          <h2 className="text-gray-600">Selected Class: </h2>
+          <p className="ml-2 font-medium text-lg">{label}</p>
+        </div>
+        <div className="mt-4">
+          <h2 className="mb-2 text-gray-600">Name</h2>
+          <Input
+            variant="filled"
+            placeholder="name"
+            type="text"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setName(e.target.value)
+            }
+          />
+        </div>
+        <div className="mt-4">
+          <h2 className="mb-2 text-gray-600">Email</h2>
+          <Input
+            variant="filled"
+            placeholder="email"
+            type="email"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setEmail(e.target.value)
+            }
+          />
+        </div>
+        <div className="mt-6">
+          <Button label="Submit" />
+        </div>
+      </ModalComponent>
     </div>
   );
 }

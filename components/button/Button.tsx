@@ -1,9 +1,10 @@
 import React from "react";
 import IButton from "./IButton";
 
-export default function Button({ label, icon, extras }: IButton) {
+export default function Button({ label, icon, extras, onClick }: IButton) {
   return (
     <button
+      onClick={onClick}
       className={[
         "bg-red-500",
         "p-1",

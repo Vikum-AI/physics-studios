@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@lottiefiles/react-lottie-player": "^3.4.7",
     "@mantine/core": "^5.1.6",
     "mobx": "^6.6.1",

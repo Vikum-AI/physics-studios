@@ -1,23 +1,36 @@
 import { action, makeObservable, observable } from "mobx";
 
-class GenericStore {
-  enrollModal: boolean = false;
+class GenericStore<T> {
+  enrolModal: boolean = false;
+  enrolTitle: string = "";
 
   constructor() {
     makeObservable(this, {
-      enrollModal: observable,
+      enrolModal: observable,
+      enrolTitle: observable,
       openEnrollModal: action,
-      closeEntrollModal: action,
+      getEnrolState: action,
+      getEnrolTitle: action,
+      closeEnrolModal: action,
     });
   }
 
-  openEnrollModal() {
+  openEnrollModal(title: string) {
     console.log("enroll");
-    this.enrollModal = true;
+    this.enrolModal = true;
+    this.enrolTitle = title;
   }
 
-  closeEntrollModal() {
-    this.enrollModal = false;
+  closeEnrolModal() {
+    this.enrolModal = false;
+  }
+
+  getEnrolState() {
+    return this.enrolModal;
+  }
+
+  getEnrolTitle() {
+    return this.enrolTitle;
   }
 }
 

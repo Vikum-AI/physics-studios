@@ -7,10 +7,14 @@ function Card({
   title,
   description,
   secondary,
+  Icon,
+  iconColor,
+  iconSize,
   image,
   extras,
   button,
   tertiary,
+  onClick,
 }: ICard) {
   return (
     <div
@@ -28,7 +32,8 @@ function Card({
           " "
         )}
       >
-        {image ? image : <></>}
+        {Icon && <Icon size={iconSize || 50} color={iconColor} />}
+        {image ? <Image src={image} alt="image" height={80} width={90} /> : ""}
       </div>
       <h1 className="text-center text-lg mt-2">{title}</h1>
       <div>
@@ -38,7 +43,7 @@ function Card({
       </div>
       {button ? (
         <div className="flex justify-center mt-8">
-          <Button label={button} />
+          <Button label={button} onClick={onClick} />
         </div>
       ) : (
         <></>

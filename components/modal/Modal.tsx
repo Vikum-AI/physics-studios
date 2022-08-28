@@ -1,22 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { Modal } from "@mantine/core";
 import IModal from "./IModal";
-import Store from "../../store/GenericStore";
-import { observer } from "mobx-react";
 
-function Modal({ opened }: IModal) {
+function ModalComponent({ opened, onClick, children }: IModal) {
   return (
     <div>
-      <Modal
-        opened={opened}
-        onClose={() => {
-          !opened;
-        }}
-      >
-        <h1>Modal</h1>
+      <Modal opened={opened} onClose={onClick}>
+        {children}
       </Modal>
     </div>
   );
 }
 
-export default Modal;
+export default ModalComponent;

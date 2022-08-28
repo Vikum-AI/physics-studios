@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/3dheader/Header";
 import Divider from "../components/divider/Divider";
 import ContactWidget from "../widgets/contact-widget/ContactWidget";
+import Footer from "../widgets/footer/Footer";
 import NavBar from "../widgets/navbar/NavBar";
 
 export default function Contact() {
@@ -11,6 +12,7 @@ export default function Contact() {
       <Divider />
       <Header label="Get in touch" />
       <ContactWidget />
+      <Footer />
     </div>
   );
 }
