@@ -14,31 +14,28 @@ export default function Main() {
       className={[
         "h-[70vh]",
         "flex",
+        "flex-col",
+
+        "md:flex-row",
         "items-center",
         "justify-around",
         "bg-gradient-to-r",
         "rounded-b-[4rem]",
         // "bg-[#edf0f7]",
         "bg-gray-50",
+
         `${styles.animation}`,
       ].join(" ")}
     >
-      <div className="flex justify-center items-center w-[40%] h-[40%]">
+      <div className="flex justify-center items-center w-full md:w-[50%] h-[40%]">
         <MainInfo />
       </div>
-      <div>
-        {/* <Player
-          autoplay
-          loop
-          src="https://assets6.lottiefiles.com/packages/lf20_hh8crugh.json"
-          style={{ height: "450px", width: "450px" }}
-          className="main-player"
-        > */}
+      <div className="w-[400px] h-[400px]">
         <Player
           autoplay
           loop
           src="https://assets2.lottiefiles.com/packages/lf20_ikvz7qhc.json"
-          style={{ height: "450px", width: "450px" }}
+          // style={{ height: "450px", width: "450px" }}
           className="main-player"
         >
           <Controls />

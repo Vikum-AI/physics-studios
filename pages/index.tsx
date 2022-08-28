@@ -18,7 +18,7 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="w-[100vw]">
+    <div className="w-[99vw]">
       <div className="hidden md:block shadow-sm">
         <NavBar />
       </div>
