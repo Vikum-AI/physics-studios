@@ -11,24 +11,18 @@ export default function AboutHeader() {
   return (
     <div className="mt-14">
       <Header label="About Us" />
-      <div className="relative -top-24 flex items-center justify-around">
-        {/* <Player
-          autoplay
-          loop
-          src="https://assets2.lottiefiles.com/packages/lf20_ikvz7qhc.json"
-          style={{ height: "450px", width: "450px" }}
-          className="main-player"
-        > */}
-        <Player
-          autoplay
-          loop
-          src="https://assets5.lottiefiles.com/packages/lf20_wg0utmug.json"
-          style={{ height: "450px", width: "450px" }}
-          className="main-player"
-        >
-          <Controls />
-        </Player>
-        <div className="w-[50%]">
+      <div className="relative -top-24 flex flex-col md:flex-row items-center justify-around">
+        <div className="w-[300px] h-[300px] md:w-[450px] md:h-[450px]">
+          <Player
+            autoplay
+            loop
+            src="https://assets5.lottiefiles.com/packages/lf20_wg0utmug.json"
+            className="main-player"
+          >
+            <Controls />
+          </Player>
+        </div>
+        <div className="w-[85%] md:w-[50%]">
           <p>
             {" "}
             We are a team of dedicated physics teachers with the aim for making
@@ -42,8 +36,8 @@ export default function AboutHeader() {
         </div>
       </div>
       <Header label="Meet the Team" extras="relative -top-20" />
-      <div className="relative -top-16 flex justify-around items-center">
-        <div className="w-[50%]">
+      <div className="relative -top-16 flex flex-col md:flex-row  justify-around items-center">
+        <div className="w-[85%] md:w-[50%]">
           <h1 className="text-3xl font-bold text-gray-700 mb-5">
             Hello, I am Malith Withthanarachchi
           </h1>
@@ -54,7 +48,7 @@ export default function AboutHeader() {
             corrupti rerum ratione nulla?
           </p>
           <Socials />
-          <div className="w-[20%] rotate-[270deg] relative left-[60%]">
+          <div className="hidden mdLflex w-[20%] rotate-[270deg] relative left-[60%]">
             <Image src={SquigglyArrowOne} alt="doodle" />
           </div>
         </div>

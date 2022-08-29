@@ -7,17 +7,17 @@ const NavListData: Array<INavListData> = [
     path: "/",
   },
   {
-    id: 1,
+    id: 2,
     label: "About",
     path: "/about",
   },
   {
-    id: 1,
+    id: 3,
     label: "Contact",
     path: "/contact",
   },
   {
-    id: 1,
+    id: 4,
     label: "Testamonials",
     path: "/testamonials",
   },

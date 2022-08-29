@@ -1,3 +1,4 @@
+import IEnrolData from "../interfaces/IEnrolData";
 const EnrolData: Array<IEnrolData> = [
   {
     id: 1,
@@ -26,7 +27,7 @@ const EnrolData: Array<IEnrolData> = [
     secondary: "4:00pm - 6:30pm (IST)",
     tertiary: "10:30am - 01:00pm (GMT)",
     button: "Enrol Now",
-    image: "/img/EnrolIcons/cam-al-1.png",
+    image: "/img/EnrolIcons/cam-al-2.png",
     extras: "mx-20",
   },
   {

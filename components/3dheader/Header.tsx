@@ -1,4 +1,5 @@
 import React from "react";
+import IHeader from "./IHeader";
 
 export default function Header({ label, extras }: IHeader) {
   return (
