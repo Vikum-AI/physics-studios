@@ -1,6 +1,9 @@
+import React from "react";
+
 interface IButton {
   label?: string;
-  icon?: JSX.Element;
+  Icon?: React.ElementType;
+  iconStyles?: string;
   extras?: string;
   varient?: string;
   onClick?: (...params: any) => any;

@@ -16,11 +16,12 @@ const NavListData: Array<INavListData> = [
     label: "Contact",
     path: "/contact",
   },
-  {
-    id: 4,
-    label: "Testamonials",
-    path: "/testamonials",
-  },
+
+  // {
+  //   id: 4,
+  //   label: "Testamonials",
+  //   path: "/testamonials",
+  // },
 ];
 
 export default NavListData;

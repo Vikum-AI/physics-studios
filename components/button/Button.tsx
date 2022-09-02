@@ -1,7 +1,13 @@
 import React from "react";
 import IButton from "./IButton";
 
-export default function Button({ label, icon, extras, onClick }: IButton) {
+export default function Button({
+  label,
+  Icon,
+  extras,
+  onClick,
+  iconStyles,
+}: IButton) {
   return (
     <button
       onClick={onClick}
@@ -20,6 +26,7 @@ export default function Button({ label, icon, extras, onClick }: IButton) {
       ].join(" ")}
     >
       {label}
+      {Icon && <Icon className={iconStyles} />}
     </button>
   );
 }

@@ -3,11 +3,14 @@ import Image from "next/image";
 import React from "react";
 import Header from "../../components/3dheader/Header";
 import Button from "../../components/button/Button";
-import ProfilePic from "../../Assets/profile-pic-2.png";
+import ProfilePic from "../../Assets/profile-pic-1.png";
 import Socials from "../../components/socials/Socials";
 import SquigglyArrowOne from "../../Assets/doodles/squiggly-arrow-2.png";
+import { useRouter } from "next/router";
 
 export default function AboutHeader() {
+  const router = useRouter();
+
   return (
     <div className="mt-14">
       <Header label="About Us" />
@@ -23,15 +26,22 @@ export default function AboutHeader() {
           </Player>
         </div>
         <div className="w-[85%] md:w-[50%]">
-          <p>
+          <p className="text-lg">
             {" "}
             We are a team of dedicated physics teachers with the aim for making
-            physics tutoring accessible to everyone. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Eos fuga omnis ducimus facilis non id
-            quidem illum tenetur rerum ipsam.
+            physics tutoring accessible to everyone. Physics help you understand
+            the world around you.
+            <ul className="mt-4 list-disc text-base ml-4">
+              <li>Some random point</li>
+              <li>Some random point</li>
+              <li>Some random point</li>
+            </ul>
           </p>
           <div className="mt-10">
-            <Button label="Contact Us" />
+            <Button
+              label="Contact Us"
+              onClick={() => router.push("/contact")}
+            />
           </div>
         </div>
       </div>
@@ -42,17 +52,21 @@ export default function AboutHeader() {
             Hello, I am Malith Withthanarachchi
           </h1>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
-            sapiente perferendis quia modi exercitationem repellat eveniet quasi
-            sit enim, cupiditate fugit esse quis? Vel tempore, voluptatum
-            corrupti rerum ratione nulla?
+            Mr. Malith Withanaarachchi, a senior physics teachers at Lyceum
+            International School in Wattala, which is one of the largest
+            international schools delivering both Cambridge and Edexcel
+            curriculums for over 5500 students. He is a graduate from University
+            of Sri Jayewardenepura, Sri Lanka specialized in Physics,
+            Mathematics and Computer sciences.
           </p>
           <Socials />
           <div className="hidden mdLflex w-[20%] rotate-[270deg] relative left-[60%]">
             <Image src={SquigglyArrowOne} alt="doodle" />
           </div>
         </div>
-        <Image src={ProfilePic} alt="Profile picture" />
+        <div className="w-[50%] sm:w-[40%] md:w-[25%] lg:w-[15%]">
+          <Image src={ProfilePic} alt="Profile picture" />
+        </div>
       </div>
     </div>
   );

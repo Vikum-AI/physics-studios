@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Divider from "../components/divider/Divider";
 import ModalComponent from "../components/modal/Modal";
 import EnrollContact from "../widgets/enroll-contact/EnrollContact";
@@ -9,6 +9,8 @@ import Footer from "../widgets/footer/Footer";
 import Main from "../widgets/main-section/Main";
 import NavbarMobile from "../widgets/navbar-mobile/NavbarMobile";
 import NavBar from "../widgets/navbar/NavBar";
+import { Transition } from "@headlessui/react";
+import SideNavBar from "../widgets/navbar-mobile/side-nav-bar/SideNavBar";
 
 const Home: NextPage = () => {
   const [active, setActive] = useState(false);
@@ -18,20 +20,34 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="w-[99vw]">
+    <div className={`${active ? "h-screen" : ""}`}>
       <div className="hidden md:block shadow-sm">
         <NavBar />
       </div>
       <div className="md:hidden">
-        <NavbarMobile />
+        <div className={`${active ? "hidden" : ""}`}>
+          <NavbarMobile onClick={() => setActive(!active)} />
+        </div>
+        <Transition.Root as={Fragment} show={active}>
+          <Transition.Child
+            enter="transition ease-in-out duration-300 transform"
+            enterFrom="-translate-x-full"
+            enterTo="translate-x-0"
+            leave="transition ease-in-out duration-300 transform"
+            leaveFrom="translate-x-0"
+            leaveTo="-translate-x-full"
+          >
+            <SideNavBar onClick={() => setActive(false)} />
+          </Transition.Child>
+        </Transition.Root>
       </div>
-      <Divider />
-      <Main />
-      <Explain />
-      <Enroll />
-      {/* <EnrollContact /> */}
-      <Footer />
-      {/* <AffixComp /> */}
+      <div className={`${active ? "hidden" : ""}`}>
+        <Divider />
+        <Main />
+        <Explain />
+        <Enroll />
+        <Footer />
+      </div>
     </div>
   );
 };
