@@ -32,14 +32,10 @@ function Enrol() {
 
     axios
       .post("https://api.emailjs.com/api/v1.0/email/send", emailData)
-      .then((res) => console.log(res))
       .catch((err) => console.error(err));
 
     setOpened(true);
     setActive(false);
-    // setTimeout(() => {
-    //   setOpened(false), 5000;
-    // });
   };
 
   const enrollFunc = (displayName: string) => {
