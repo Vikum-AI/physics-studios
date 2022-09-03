@@ -1,7 +1,6 @@
 import { Input, Modal } from "@mantine/core";
 import React, { useState } from "react";
 import Button from "../../components/button/Button";
-import Store from "../../store/GenericStore";
 
 function EnrollContact() {
   const [opened, setOpened] = useState(false);
