@@ -5,6 +5,7 @@ import Card from "../../components/card/Card";
 import ModalComponent from "../../components/modal/Modal";
 import EnrolData from "../../const/EnrolData";
 import axios from "axios";
+import { ImCross } from "react-icons/im";
 
 function Enrol() {
   const [active, setActive] = useState(false);
@@ -12,8 +13,12 @@ function Enrol() {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
 
   const [opened, setOpened] = useState(false);
+
+  const [error, setError] = useState(false);
+  const [errMsg, setErrMsg] = useState("");
 
   const form = useRef<string | HTMLFormElement>("");
 
@@ -23,19 +28,26 @@ function Enrol() {
     user_id: "MBq4q7Arr4yAB5mtj",
     template_params: {
       from_name: name,
-      message: `${name} is requesting to join the ${label} class. Email of student: ${email}`,
+      message: `${name} is requesting to join the ${label} class. Email of student: ${email}. Contact number of student: ${phone} `,
     },
   };
 
   const sendPostEmail = (e: any) => {
     e.preventDefault();
 
-    axios
-      .post("https://api.emailjs.com/api/v1.0/email/send", emailData)
-      .catch((err) => console.error(err));
+    if (name !== "" && email !== "" && phone !== "") {
+      axios
+        .post("https://api.emailjs.com/api/v1.0/email/send", emailData)
+        .catch((err) => console.error(err));
 
-    setOpened(true);
-    setActive(false);
+      setOpened(true);
+      setActive(false);
+      setError(false);
+      setErrMsg("");
+    } else {
+      setError(true);
+      setErrMsg("Error: Required to fill all input files");
+    }
   };
 
   const enrollFunc = (displayName: string) => {
@@ -86,6 +98,7 @@ function Enrol() {
         <div className="mt-4">
           <h2 className="mb-2 text-gray-600">Name</h2>
           <Input
+            required
             variant="filled"
             placeholder="name"
             type="text"
@@ -98,6 +111,7 @@ function Enrol() {
         <div className="mt-4">
           <h2 className="mb-2 text-gray-600">Email</h2>
           <Input
+            required
             variant="filled"
             placeholder="email"
             type="email"
@@ -106,6 +120,19 @@ function Enrol() {
             }
           />
         </div>
+        <div className="mt-4">
+          <h2 className="mb-2 text-gray-600">Contact Number</h2>
+          <Input
+            required
+            variant="filled"
+            placeholder="Contact Number"
+            type="text"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setPhone(e.target.value)
+            }
+          />
+        </div>
+
         <div className="mt-6">
           <Button label="Submit" onClick={(e) => sendPostEmail(e)} />
         </div>
@@ -119,6 +146,16 @@ function Enrol() {
       >
         <CheckIcon className="w-5 h-5 m-2 text-green-500" />
         <p className="m-2 text-green-600 font-medium">Enrolment Success</p>
+      </Dialog>
+      <Dialog
+        opened={error}
+        withCloseButton
+        onClose={() => setError(false)}
+        position={{ bottom: 20, right: 20 }}
+        className="flex bg-red-100"
+      >
+        <ImCross className="w-5 h-5 m-2 text-red-500" />
+        <p className="m-2 text-red-600 font-medium">{errMsg}</p>
       </Dialog>
     </div>
   );

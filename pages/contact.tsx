@@ -1,12 +1,13 @@
+import { Transition } from "@headlessui/react";
 import React, { Fragment, useState } from "react";
+
 import Header from "../components/3dheader/Header";
 import Divider from "../components/divider/Divider";
 import ContactWidget from "../widgets/contact-widget/ContactWidget";
 import Footer from "../widgets/footer/Footer";
 import NavbarMobile from "../widgets/navbar-mobile/NavbarMobile";
-import NavBar from "../widgets/navbar/NavBar";
-import { Transition } from "@headlessui/react";
 import SideNavBar from "../widgets/navbar-mobile/side-nav-bar/SideNavBar";
+import NavBar from "../widgets/navbar/NavBar";
 
 export default function Contact() {
   const [active, setActive] = useState(false);

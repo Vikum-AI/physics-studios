@@ -2,6 +2,7 @@ import { Controls, Player } from "@lottiefiles/react-lottie-player";
 import { CheckIcon, Dialog, Input, Textarea } from "@mantine/core";
 import axios from "axios";
 import React, { useState } from "react";
+
 import Button from "../../components/button/Button";
 import Socials from "../../components/socials/Socials";
 
