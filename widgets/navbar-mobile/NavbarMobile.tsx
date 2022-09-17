@@ -1,18 +1,13 @@
 import Image from "next/image";
-import React, { Fragment, useEffect, useState } from "react";
-import NavList from "../../components/navlist/NavList";
+import React, { useEffect, useState } from "react";
 import LogoLight from "../../Assets/logo-light.png";
 import Burger from "../../components/burger/Burger";
 import Button from "../../components/button/Button";
-import { Transition } from "@headlessui/react";
-import SideNavBar from "./side-nav-bar/SideNavBar";
 import INavMobile from "./INavMobile";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Link from "next/link";
 
 export default function NavbarMobile({ onClick }: INavMobile) {
-  const [active, setActive] = useState(false);
-
   const [pathName, setPathName] = useState("");
 
   useEffect(() => {
@@ -51,18 +46,6 @@ export default function NavbarMobile({ onClick }: INavMobile) {
           <Burger />
         </div>
       </div>
-      {/* <Transition.Root as={Fragment} show={active}>
-        <Transition.Child
-          enter="transition ease-in-out duration-300 transform"
-          enterFrom="-translate-x-full"
-          enterTo="translate-x-0"
-          leave="transition ease-in-out duration-300 transform"
-          leaveFrom="translate-x-0"
-          leaveTo="-translate-x-full"
-        >
-          <SideNavBar />
-        </Transition.Child>
-      </Transition.Root> */}
     </div>
   );
 }
