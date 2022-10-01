@@ -20,9 +20,9 @@ function ContactWidget() {
   };
 
   const emailData = {
-    service_id: "service_2j8ndro",
-    template_id: "template_g0wo1c6",
-    user_id: "MBq4q7Arr4yAB5mtj",
+    service_id: process.env.SERVICE_ID,
+    template_id: process.env.TEMPLATE_ID,
+    user_id: process.env.USER_ID,
     template_params: {
       from_name: name,
       message: `Message from ${email} @Physics Studios, ${message}`,
