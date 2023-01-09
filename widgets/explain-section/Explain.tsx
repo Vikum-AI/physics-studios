@@ -31,7 +31,7 @@ export default function Explain() {
             description="Join a trial class for free by using the portals below."
           />
           <Card
-            title="Join Online or Physical"
+            title="Join Online or Onsite"
             Icon={BsCameraVideo}
             iconColor="#4991ff"
             iconSize={60}

@@ -65,7 +65,7 @@ function ContactWidget() {
           <Socials />
         </div>
       </div>
-      <div className="h-full flex flex-col justify-around gap-y-14 p-10 w-full bg-gradient-to-r from-[#ee0979]/40  to-[#ff6a00]/40 rounded-md mb-32">
+      <div className="h-full flex flex-col justify-around gap-y-14 p-10 w-full bg-red-500/40 rounded-md mb-32">
         <div>
           <h1 className="text-white text-lg">Name</h1>
           <Input
