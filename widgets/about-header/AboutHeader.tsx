@@ -4,9 +4,10 @@ import React from "react";
 import Header from "../../components/3dheader/Header";
 import Button from "../../components/button/Button";
 import ProfilePic from "../../Assets/profile-pic-1.png";
-import Socials from "../../components/socials/Socials";
 import SquigglyArrowOne from "../../Assets/doodles/squiggly-arrow-2.png";
 import { useRouter } from "next/router";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export default function AboutHeader() {
   const router = useRouter();
@@ -27,14 +28,23 @@ export default function AboutHeader() {
         </div>
         <div className="w-[85%] md:w-[50%]">
           <p className="text-lg">
-            {" "}
-            We are a team of dedicated physics teachers with the aim for making
-            physics tutoring accessible to everyone. Physics help you understand
-            the world around you.
+            Physics is the branch of science that deals with the structure of
+            matter and how the fundamentals constituents of the universe
+            interacts. It studies objects ranging from very small subatomic
+            particles using quantum mechanics and the entire universe using the
+            theories of relativity.
+            <div className="mt-2">
+              We are a team of dedicated physics teachers with the aim of making
+              physics tutoring accessible to everyone from anywhere in the
+              world.
+            </div>
             <ul className="mt-4 list-disc text-base ml-4">
-              <li>Some random point</li>
-              <li>Some random point</li>
-              <li>Some random point</li>
+              <li>We use analogies and anecdotes</li>
+              <li>We outline the content that the student should know</li>
+              <li>We summarize the material in different ways</li>
+              <li>Encourage them to ask questions</li>
+              <li>Teach in a simple format</li>
+              <li>Make your physics course fun</li>
             </ul>
           </p>
           <div className="mt-10">
@@ -52,14 +62,37 @@ export default function AboutHeader() {
             Hello, I am Malith Withthanarachchi
           </h1>
           <p>
-            Mr. Malith Withanaarachchi, a senior physics teachers at Lyceum
-            International School in Wattala, which is one of the largest
+            Mr. Malith Withanaarachchi, a senior physics teachers at a leading
+            international school in Colombo, which is one of the largest
             international schools delivering both Cambridge and Edexcel
             curriculums for over 5500 students. He is a graduate from University
             of Sri Jayewardenepura, Sri Lanka specialized in Physics,
-            Mathematics and Computer sciences.
+            Mathematics and Computer sciences. Mr Withanaarachchi completed his
+            masters degree in physics education from University of Colombo.
           </p>
-          <Socials />
+          {/* <Socials /> */}
+          <div className="mt-4">
+            <ul className="flex flex-col space-y-3">
+              <li className="cursor-pointer">
+                <div className="flex space-x-2 items-center">
+                  <FaPhoneAlt
+                    className="hover:text-green-500 transition duration-500"
+                    size={25}
+                  />
+                  <span>+94 713 114 565 / +94 772 783 139</span>
+                </div>
+              </li>
+              <li className="cursor-pointer">
+                <div className="flex space-x-2 items-center">
+                  <MdEmail
+                    className="hover:text-[#1DA1F2] transition duration-500"
+                    size={25}
+                  />
+                  <span>example@email.com</span>
+                </div>
+              </li>
+            </ul>
+          </div>
           <div className="hidden mdLflex w-[20%] rotate-[270deg] relative left-[60%]">
             <Image src={SquigglyArrowOne} alt="doodle" />
           </div>
