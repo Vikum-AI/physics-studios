@@ -23,8 +23,16 @@ export default function Footer() {
         <div className="w-[80%] ml-4 hidden sm:flex">
           <p>
             {" "}
-            34, Walauwatte Road <br /> Nugegoda <br /> Colombo <br /> Sri Lanka
+            34, Walauwatte Road <br /> Nugegoda <br /> Colombo <br /> Sri Lanka{" "}
           </p>
+        </div>
+        <div className="m-4 text-slate-400">
+          Developed and maintained by{" "}
+          <span className="underline underline-offset-2">
+            <Link href="mailto:vikumdabare@gmail.com" className="underline">
+              Vikum Dabare
+            </Link>
+          </span>
         </div>
       </div>
       <div className="hidden md:flex flex-col">
