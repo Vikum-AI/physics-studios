@@ -8,7 +8,7 @@ import IResponsiveNavBar from "./IResponsiveNavBar";
 function ResponsiveNavBar({ active, onClick }: IResponsiveNavBar) {
   return (
     <>
-      <div className="hidden md:block shadow-sm">
+      <div className="hidden md:block">
         <NavBar />
       </div>
       <div className="md:hidden">

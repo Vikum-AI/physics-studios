@@ -14,8 +14,8 @@ export default function NavBar() {
   }, [pathName]);
 
   return (
-    <div className="flex justify-between h-[7rem]">
-      <div className="w-[5.7rem] mx-4 flex items-center">
+    <div className="flex justify-around items-center mt-4">
+      <div className="w-24 flex items-center">
         <Image src={LogoLight} alt="Logo" />
       </div>
       <div className="flex justify-center items-center w-[40%]">
@@ -34,7 +34,7 @@ export default function NavBar() {
             <Link href="/">
               <Button
                 label="Enroll Now"
-                extras="bg-red-200 text-red-600 p-2 hover:bg-red-300 hover:text-red-600"
+                extras="bg-red-200 text-red-600 hover:bg-red-300 hover:text-red-600"
               />
             </Link>
           </>

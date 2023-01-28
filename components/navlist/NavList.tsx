@@ -5,11 +5,13 @@ import INavList from "./INavList";
 
 export default function NavList({ extras }: INavList) {
   return (
-    <ul className={["flex", "justify-around", "w-full", `${extras}`].join(" ")}>
+    <ul
+      className={["flex", "justify-between", "w-full", `${extras}`].join(" ")}
+    >
       {NavListData.map((item) => (
         <li
           key={item.id}
-          className="p-2 text-md hover:text-red-600 rounded-md transition duration-300"
+          className="p-2 text-md hover:text-red-600 rounded-md transition duration-300 text-slate-800"
         >
           <Link href={item.path}>{item.label}</Link>
         </li>

@@ -1,6 +1,6 @@
 import INavListData from "../interfaces/INavListData";
 
-const NavListData: Array<INavListData> = [
+const NavListData: INavListData[] = [
   {
     id: 1,
     label: "Home",
@@ -8,7 +8,12 @@ const NavListData: Array<INavListData> = [
   },
   {
     id: 2,
-    label: "About",
+    label: "Classes",
+    path: "/",
+  },
+  {
+    id: 3,
+    label: "About Us",
     path: "/about",
   },
   {

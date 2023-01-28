@@ -17,7 +17,6 @@ const Home: NextPage = () => {
         onClick={(state: boolean) => setActive(state)}
       />
       <div className={`${active ? "hidden" : ""}`}>
-        <Divider />
         <Main />
         <Explain />
         <Enroll />
