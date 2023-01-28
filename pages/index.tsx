@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import { useState } from "react";
-import Divider from "../components/divider/Divider";
 import Enroll from "../widgets/enroll-section/Enroll";
 import Explain from "../widgets/explain-section/Explain";
 import Footer from "../widgets/footer/Footer";

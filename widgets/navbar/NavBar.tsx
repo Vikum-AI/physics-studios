@@ -14,7 +14,7 @@ export default function NavBar() {
   }, [pathName]);
 
   return (
-    <div className="flex justify-around items-center mt-4">
+    <div className="flex justify-between items-center mt-4 mx-4 lg:mx-20">
       <div className="w-24 flex items-center">
         <Image src={LogoLight} alt="Logo" />
       </div>
@@ -26,7 +26,7 @@ export default function NavBar() {
           <AnchorLink href="#enroll">
             <Button
               label="Enroll Now"
-              extras="bg-red-200 text-red-600 p-2 hover:bg-red-300 hover:text-red-600"
+              extras="bg-red-200 text-red-500 hover:text-red-600 py-2 px-5 rounded-lg hover:bg-red-300 hover:text-red-600"
             />
           </AnchorLink>
         ) : (
@@ -34,7 +34,7 @@ export default function NavBar() {
             <Link href="/">
               <Button
                 label="Enroll Now"
-                extras="bg-red-200 text-red-600 hover:bg-red-300 hover:text-red-600"
+                extras="bg-red-200 text-red-500 hover:text-red-600 py-2 px-5 rounded-lg hover:bg-red-300 hover:text-red-600"
               />
             </Link>
           </>

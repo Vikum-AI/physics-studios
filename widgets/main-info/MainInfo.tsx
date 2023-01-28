@@ -1,23 +1,33 @@
-import Image from "next/image";
-import React from "react";
-import LightBulb from "../../Assets/doodles/light-bulb-doodle.png";
+import Button from "../../components/button/Button";
+import DisplayStats from "../display-stats/DisplayStats";
 
 export default function MainInfo() {
   return (
-    <div className="">
-      <div className="hidden lg:flex relative w-[15%] left-[60%] -top-8">
-        <Image src={LightBulb} alt="doodle" />
-      </div>
-
-      <div className="flex flex-col justify-center">
-        <h1 className="text-4xl font-bold m-4 text-center md:text-left">
-          A Simple Platform for All Your
-          <span className="text-5xl bg-clip-text text-transparent bg-gradient-to-r from-[#40E0D0] via-[#FF8C00] to-[#FF0080] mx-2">
-            Physics Learning
-          </span>
-          Needs.
-        </h1>
-      </div>
+    <div className="flex flex-col space-y-6">
+      <h2 className="text-4xl xs:text-5xl lg:text-4xl xl:text-5xl font-semibold text-left md:text-left text-slate-900 leading-[3.8rem]">
+        A Simple Platform for All Your
+        <span className="text-4xl xs:text-5xl lg:text-4xl xl:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-[#40E0D0] via-[#FF8C00] to-[#FF0080] mx-2 leading-[3.8rem]">
+          Physics Learning
+        </span>
+        Needs.
+      </h2>
+      <section>
+        <p className="text-slate-900 text-lg">
+          “eLearning is changing. And, we will see new models, new technologies,
+          and designs emerge. So, let’s drop the “e” – or at least give it a new
+          and wider definition.”
+        </p>
+      </section>
+      <section className="flex space-x-4">
+        <Button label="Get Started" extras="py-3 rounded-lg px-5 w-32" />
+        <Button
+          label="Classes"
+          extras="bg-red-200 py-3 rounded-lg px-5 text-red-500 w-32 hover:bg-red-300 hover:text-red-600"
+        />
+      </section>
+      <section className="lg:hidden xl:block hidden xs:block">
+        <DisplayStats />
+      </section>
     </div>
   );
 }
