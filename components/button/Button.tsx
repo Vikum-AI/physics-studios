@@ -1,4 +1,3 @@
-import React from "react";
 import IButton from "./IButton";
 
 export default function Button({
@@ -26,7 +25,7 @@ export default function Button({
       ].join(" ")}
     >
       {label}
-      {Icon && <Icon className={iconStyles} />}
+      {Icon ? <Icon className={iconStyles} /> : null}
     </button>
   );
 }
