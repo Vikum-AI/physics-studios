@@ -6,6 +6,7 @@ import Footer from "../widgets/footer/Footer";
 import Main from "../widgets/main-section/Main";
 import ResponsiveNavBar from "../widgets/navbar/ResponsiveNavBar";
 import CurriculumSection from "../widgets/curriculum-section/CurriculumSection";
+import TestimonialSection from "../widgets/testimonial-section/TestimonialSection";
 
 const Home: NextPage = () => {
   const [active, setActive] = useState(false);
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
       <div className={`${active ? "hidden" : ""}`}>
         <Main />
         <CurriculumSection />
+        <TestimonialSection />
         <Explain />
         <Enroll />
         <Footer />
