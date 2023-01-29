@@ -42,7 +42,7 @@ export default function NavBar() {
         <Link href="/sign-in">
           <Button
             label="Sign In"
-            extras="bg-red-200 text-red-500 hover:text-red-600 py-2 px-5 rounded-lg hover:bg-red-300 hover:text-red-600"
+            extras="bg-red-200 !text-red-500 hover:text-red-600 py-2 px-5 rounded-lg hover:bg-red-300 hover:text-red-600"
           />
         </Link>
       </div>

@@ -22,7 +22,7 @@ export default function MainInfo() {
         <Button label="Get Started" extras="py-3 rounded-lg px-5 w-32" />
         <Button
           label="Classes"
-          extras="bg-red-200 py-3 rounded-lg px-5 text-red-500 w-32 hover:bg-red-300 hover:text-red-600"
+          extras="bg-red-200 py-3 rounded-lg px-5 !text-red-500 w-32 hover:bg-red-300 hover:text-red-600"
         />
       </section>
       <section className="lg:hidden xl:block place-content-center">
