@@ -22,7 +22,7 @@ export default function NavBar() {
         <NavList />
       </div>
       <div className="h-full flex items-center mx-4">
-        {pathName === "/" ? (
+        {/* {pathName === "/" ? (
           <AnchorLink href="#enroll">
             <Button
               label="Enroll Now"
@@ -38,7 +38,13 @@ export default function NavBar() {
               />
             </Link>
           </>
-        )}
+        )} */}
+        <Link href="/sign-in">
+          <Button
+            label="Sign In"
+            extras="bg-red-200 text-red-500 hover:text-red-600 py-2 px-5 rounded-lg hover:bg-red-300 hover:text-red-600"
+          />
+        </Link>
       </div>
     </div>
   );
