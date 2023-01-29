@@ -14,9 +14,9 @@ export default function Explain() {
         <Image src={SquigglyArrowOne} alt="doodle" />
       </div>
       <div>
-        <h1 className="text-3xl font-bold text-start m-8 ml-12">
+        <h2 className="text-3xl font-semibold text-slate-900 text-start m-8 ml-12">
           How it works?{" "}
-        </h1>
+        </h2>
         <div className="w-[14rem] h-4 bg-red-200 relative -top-11 left-9 opacity-50 -z-10"></div>
       </div>
       {/* flex justify-around my-10 */}

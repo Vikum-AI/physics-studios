@@ -58,9 +58,9 @@ function Enrol() {
   return (
     <div className="mb-[10rem]" id="enroll">
       <div>
-        <h1 className="text-3xl font-bold text-start m-8  ml-12">
+        <h2 className="text-3xl font-semibold text-start m-8  ml-12">
           Enrol in a class
-        </h1>
+        </h2>
         <div className="w-[15rem] h-4 bg-red-200 relative -top-11 left-10 opacity-50 -z-10"></div>
       </div>
       {/* grid-cols-1 sm:grid-col-2 md:grid-cols-3 gap-10 */}
