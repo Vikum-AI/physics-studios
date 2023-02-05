@@ -37,7 +37,7 @@ export default function Footer() {
       </div>
       <div className="hidden md:flex flex-col">
         <h1 className="ml-2 mb-4">Pages</h1>
-        <NavList extras="flex-col" />
+        <NavList extras="flex-col" liExtras="!text-gray-100" />
       </div>
       <div className="hidden md:flex flex-col">
         <h1 className="ml-2 mb-4">Careers</h1>

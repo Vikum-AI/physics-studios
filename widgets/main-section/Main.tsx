@@ -16,7 +16,6 @@ export default function Main() {
           "bg-opacity-50",
           "mx-8",
           "lg:mx-20",
-          // "space-x-10",
           "xl:min-h-[55vh]",
           "lg:items-center",
           "mt-10",
