@@ -8,7 +8,7 @@ const CurriculumSection = () => {
       points: ["GCSE (Ordinary Level)", "IAS & IAL (Advanced Level)"],
     },
     {
-      title: "Pearson Edecel International Education ",
+      title: "Pearson Edexcel International Education ",
       points: ["GCSE (Ordinary Level)", "IAS & IAL (Advanced Level)"],
     },
     {
