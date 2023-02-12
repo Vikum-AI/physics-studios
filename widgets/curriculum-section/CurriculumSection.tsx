@@ -8,27 +8,27 @@ const CurriculumSection = () => {
       points: ["GCSE (Ordinary Level)", "IAS & IAL (Advanced Level)"],
     },
     {
-      title: "Cambridge Assessment International Education (CAIE) ",
+      title: "Pearson Edecel International Education ",
       points: ["GCSE (Ordinary Level)", "IAS & IAL (Advanced Level)"],
     },
     {
-      title: "Cambridge Assessment International Education (CAIE) ",
+      title: "Advanced Placements (AP) ",
       points: ["GCSE (Ordinary Level)", "IAS & IAL (Advanced Level)"],
     },
     {
-      title: "Cambridge Assessment International Education (CAIE) ",
+      title: "International Baccalaureate (IP)",
       points: ["GCSE (Ordinary Level)", "IAS & IAL (Advanced Level)"],
     },
     {
-      title: "Cambridge Assessment International Education (CAIE) ",
+      title: "OCR A",
       points: ["GCSE (Ordinary Level)", "IAS & IAL (Advanced Level)"],
     },
     {
-      title: "Cambridge Assessment International Education (CAIE) ",
+      title: "OCR B",
       points: ["GCSE (Ordinary Level)", "IAS & IAL (Advanced Level)"],
     },
     {
-      title: "Cambridge Assessment International Education (CAIE) ",
+      title: "WJEC",
       points: ["GCSE (Ordinary Level)", "IAS & IAL (Advanced Level)"],
     },
   ];

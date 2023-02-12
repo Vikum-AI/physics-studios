@@ -2,19 +2,19 @@ import IDisplayCard from "../../components/display-card/IDisplayCard";
 
 const sampleStats: IDisplayCard[] = [
   {
-    value: "6900+",
+    value: "10+",
     description: "Active Teachers",
   },
   {
-    value: "100+",
-    description: "Professional Teachers",
+    value: "6+",
+    description: "Subjects",
   },
   {
-    value: "10+",
+    value: "20+",
     description: "Active Classes",
   },
   {
-    value: "6900+",
+    value: "170+",
     description: "Active Students",
   },
 ];

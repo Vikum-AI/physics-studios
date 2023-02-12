@@ -2,7 +2,7 @@ import { BsCheck } from "react-icons/bs";
 import ICheckCard from "./ICheckCard";
 
 const CheckCard = ({ title, points }: ICheckCard) => (
-  <div className="bg-slate-700 w-96 p-6 rounded-lg">
+  <div className="bg-slate-700 w-96 p-6 rounded-lg h-48">
     <section className="bg-indigo-500 w-fit rounded-lg p-1">
       <BsCheck size={34} color="white" />
     </section>

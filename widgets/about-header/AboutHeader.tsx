@@ -1,13 +1,7 @@
 import { Controls, Player } from "@lottiefiles/react-lottie-player";
-import Image from "next/image";
-import React, { useId } from "react";
 import Header from "../../components/3dheader/Header";
 import Button from "../../components/button/Button";
-import ProfilePic from "../../Assets/profile-pic-1.png";
-import SquigglyArrowOne from "../../Assets/doodles/squiggly-arrow-2.png";
 import { useRouter } from "next/router";
-import { FaPhoneAlt } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
 import TutorIntro from "../tutor-intro/TutorIntro";
 import TutorInfo from "../../const/tutors/TutorInfo";
 
@@ -31,8 +25,8 @@ export default function AboutHeader() {
         <div className="w-[85%] md:w-[50%]">
           <section className="text-lg">
             Physics is the branch of science that deals with the structure of
-            matter and how the fundamentals constituents of the universe
-            interacts. It studies objects ranging from very small subatomic
+            matter and how the fundamental constituents of the universe
+            interact. It studies objects ranging from very small subatomic
             particles using quantum mechanics and the entire universe using the
             theories of relativity.
             <div className="mt-2">
